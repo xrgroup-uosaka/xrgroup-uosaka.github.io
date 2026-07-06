@@ -77,9 +77,6 @@ a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-o
 .footer-inner { display: flex; align-items: center; justify-content: center; gap: 1rem; padding-block: 2rem; flex-wrap: wrap; text-align: center; }
 .copyright { margin: 0; font-size: .74rem; color: var(--faint); }
 .copyright a { color: var(--muted); }
-.footer-links { font-size: .74rem; }
-.footer-links a { color: var(--muted); }
-.footer-links a:hover { color: var(--ink); }
 
 /* ---------- back-to-top ---------- */
 .to-top {

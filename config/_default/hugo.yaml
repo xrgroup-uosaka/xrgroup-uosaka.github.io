@@ -21,13 +21,6 @@ pagination:
 # No taxonomy/term listing pages (research-page filtering is client-side)
 disableKinds: [taxonomy, term]
 
-# --- Google Analytics 4 ---
-# Replace the placeholder with your GA4 Measurement ID (looks like G-XXXXXXXXXX).
-# The tracking snippet is only emitted on real builds, never on `hugo server`.
-services:
-  googleAnalytics:
-    ID: G-RMPG8B79SC
-
 outputs:
   home: [HTML, RSS]
   section: [HTML]
