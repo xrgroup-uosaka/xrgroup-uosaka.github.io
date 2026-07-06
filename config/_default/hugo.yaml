@@ -1,6 +1,6 @@
 # Core Hugo configuration (plain Hugo — no theme modules)
 title: UOsaka XR Group
-baseURL: 'https://www.xr.sys.es.osaka-u.ac.jp/'
+baseURL: 'https://xrgroup-uosaka.github.io/'
 
 # --- Languages: Japanese at "/", English at "/en/" ---
 defaultContentLanguage: ja

@@ -1,42 +1,62 @@
-name: Deploy GitHub Pages
+# Build the Hugo site and deploy it to GitHub Pages.
+# Docs: https://gohugo.io/host-and-deploy/host-on-github-pages/
+name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
-    branches:
-      - master  # Set a branch name to trigger deployment
-  pull_request:
+    branches: [main]        # deploy on every push to main
+  workflow_dispatch:        # ...or run manually from the Actions tab
+
+# Permissions the workflow needs to publish to Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; don't cancel a running one
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+    env:
+      HUGO_VERSION: 0.145.0
     steps:
-      - uses: actions/checkout@v3
+      - name: Install Hugo (extended)
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb \
+            https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch any Git submodules (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
+          fetch-depth: 0
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
       - name: Build
-        run: hugo --minify
-
-      - name: create CNAME
-        run: touch ./public/CNAME && echo www.xr.sys.es.osaka-u.ac.jp > ./public/CNAME
-        
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        # If you're changing the branch from master, 
-        # also change the `master` in `refs/heads/master` 
-        # below accordingly.
-        if: ${{ github.ref == 'refs/heads/master' }}
+        env:
+          HUGO_ENVIRONMENT: production
+        # base_url is provided by GitHub Pages, so this works for any account/repo name
+        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
