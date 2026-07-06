@@ -63,4 +63,7 @@
   {{ range .AlternativeOutputFormats -}}
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
   {{ end -}}
+
+  <!-- Google Analytics 4 (only emitted on real builds, not `hugo server`) -->
+  {{ template "_internal/google_analytics.html" . }}
 </head>
