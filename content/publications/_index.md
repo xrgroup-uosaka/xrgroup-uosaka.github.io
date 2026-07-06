@@ -68,6 +68,7 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 
 #### 解説記事
 1. 日浦慎作, 岩井大輔, 黒木忍, 延原章平, 溝上陽子, 南本敬史, “質感研究プロジェクトにおける3Dプリンター活用とその効果,” AMフューチャー, Vol.2, No.1, pp. 57-62, 2026.
+1. 中村友哉, "情報科学によるイメージングシステムの変革," 精密工学会誌,
 
 #### 講演
 1. [Invited Talk] Tomoya Nakamura, Tomoyoshi Shimobaba, Yuichi Kozawa,  Mohamad Ammar Alsherfawi Aljazaerly, and Tatsuki Tahara, "Coded Imaging under Natural Light via Incoherent Digital Holography and Lensless Optics," SPIE Photonics West (Practical Holography XXXX: Displays, Materials, and Applications), 13917-23, San Francisco, California, USA, Jan. 2026.
