@@ -1,4 +1,11 @@
 {{ define "main" }}
   {{ partial "hero-slider.html" . }}
-  {{ partial "banded.html" (dict "content" .Content "tag" "<h2") }}
+  {{- /* Split the contact section off so it renders as its own band, with
+         「お問合せ」and「沿革」as peer <h3> columns (no <h2> section title). */ -}}
+  {{- $parts := split .Content `<div class="contact-cols"` -}}
+  {{ partial "banded.html" (dict "content" (index $parts 0) "tag" "<h2") }}
+  {{- if gt (len $parts) 1 -}}
+    {{- $contact := printf `<div class="contact-cols"%s` (index $parts 1) -}}
+    <section class="band is-light"><div class="band-inner prose">{{ $contact | safeHTML }}</div></section>
+  {{- end -}}
 {{ end }}

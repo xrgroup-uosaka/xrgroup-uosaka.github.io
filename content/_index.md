@@ -25,11 +25,10 @@ slides:
 
 {{< news count="5" >}}
 
-## お問合せ
-
 <div class="contact-cols" id="contact">
 <div class="contact-col">
 
+### お問合せ
 
 [大阪大学](https://www.osaka-u.ac.jp/ja/) | [基礎工学部・大学院基礎工学研究科](https://www.es.osaka-u.ac.jp/ja/) | 岩井研究室<br>
 {{< icon name="location-dot" >}} 〒560-8531 大阪府豊中市待兼山町1-3-D449<br>

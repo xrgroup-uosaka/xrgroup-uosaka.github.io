@@ -18,6 +18,7 @@
 
       <span class="lang" aria-label="{{ i18n "language" }}">
         {{- $p := . -}}
+        <span class="lang-knob" aria-hidden="true" style="transform: translateX({{ if eq $p.Site.Language.Lang "en" }}100%{{ else }}0{{ end }})"></span>
         {{ range .Site.Languages }}
           {{- $lang := . -}}
           {{- $target := ($lang.Lang | relLangURL) -}}

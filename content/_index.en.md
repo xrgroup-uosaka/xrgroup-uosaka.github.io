@@ -30,11 +30,10 @@ We apply these findings in diverse areas—including healthcare, design, educati
 
 {{< news count="5" >}}
 
-## Contact
-
 <div class="contact-cols" id="contact">
 <div class="contact-col">
 
+### Contact
 
 Iwai Lab, [Graduate School of Engineering Science](https://www.es.osaka-u.ac.jp/en/), [University of Osaka](https://www.osaka-u.ac.jp/en/)<br>
 {{< icon name="envelope" >}} staff [at] xr.sys.es.osaka-u.ac.jp<br>

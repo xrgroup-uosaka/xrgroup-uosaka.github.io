@@ -11,13 +11,26 @@
   <button id="to-top" class="to-top" type="button" aria-label="{{ i18n "backToTop" }}" hidden>↑</button>
 
   <script>
-    /* Remember an explicit EN/JA choice so the "/" auto-redirect respects it later. */
+    /* Language switch: remember the EN/JA choice, then slide the knob to the
+       clicked side before navigating so the toggle animation is visible. */
     (function () {
       var box = document.querySelector('.lang');
-      if (box) box.addEventListener('click', function (e) {
+      if (!box) return;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      box.addEventListener('click', function (e) {
         var a = e.target.closest('a'); if (!a) return;
         var t = (a.textContent || '').trim().toLowerCase();
         try { localStorage.setItem('preferredLang', t.indexOf('en') === 0 ? 'en' : 'ja'); } catch (_) {}
+        if (a.classList.contains('is-active')) { e.preventDefault(); return; }
+        if (reduce) return;                       // no animation: navigate immediately
+        e.preventDefault();
+        var links = [].slice.call(box.querySelectorAll('a'));
+        var idx = links.indexOf(a);
+        var knob = box.querySelector('.lang-knob');
+        for (var i = 0; i < links.length; i++) links[i].classList.toggle('is-active', links[i] === a);
+        if (knob) knob.style.transform = 'translateX(' + (idx * 100) + '%)';   // slide to clicked side
+        var href = a.getAttribute('href');
+        setTimeout(function () { window.location.href = href; }, 170);
       });
     })();
     /* Mobile nav toggle */
