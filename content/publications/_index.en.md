@@ -1,6 +1,7 @@
 ---
 title: Publications
 ---
+
 ### 2026
 
 #### Award
@@ -74,4 +75,6 @@ Yusuke Imoto, Takashi Amesaka, Daisuke Iwai, “Airflow Measurement for Interact
 1. [Invited Talk] Daisuke Iwai, "Projection Mapping Technologies for Seamless Spatial Augmentation," Laser Display and Lighting Conference, LDC5-3, Trinity College Dublin, Ireland (Jun 20, 2025)
 1. [Panel] Daisuke Iwai, "Projecting Texture: Enhancing Crafts and Culture through Seamless Integration of Material Surfaces and Digital Spaces," Emerging Technologies Houses - Innovation from the Italian territories for the cities of the future, Auditorium - Italy Pavilion Expo 2025 Osaka, Sep 8, 2025.
 1. [Invited Talk] Daisuke Iwai, "When Light Becomes Matter: Beyond Shadows and Dark-Environment Constraints in Projection Mapping," Beyond Images: Capturing, Rendering and Displaying Novel Characteristics of Light, OPTICA Intelligent Interfaces and Displays Technology Technical Group, Online, 17 Sep. 2025.
+
+***
 
