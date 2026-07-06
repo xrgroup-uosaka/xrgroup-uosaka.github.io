@@ -1,6 +1,7 @@
 ---
 title: 研究業績
 ---
+
 ### 2026
 
 #### 受賞
@@ -22,6 +23,8 @@ Yusuke Imoto, Takashi Amesaka, Daisuke Iwai, “Airflow Measurement for Interact
 Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D Spatial Wind Around Ears to Enhance Presence in VR," 情報処理学会インタラクション2026インタラクティブ発表, 2026. (2026年3月5日)
 1. **SCI学生発表賞**<br>
 ○川島大空, 岩井大輔, “聴覚提示とプロジェクションマッピングによるクロスモーダル統合を用いた物体の質感変調,” 第70回システム制御情報学会研究発表講演会, pp. 756-760, 2026. (2026年6月5日)
+1. **優秀プレゼンテーション賞**<br>
+○暮坪 秀哉, 雨坂 宇宙, Fengzhou Liang, Tian Min, 杉浦 裕太, 岩井 大輔,"カメラ及びIMUセンサ搭載ヒアラブルデバイスを用いた装着者の三次元姿勢推定" マルチメディア，分散，協調とモバイル(DICOMO2026)シンポジウム, pp. 770 - 778
 
 #### 著書
 1. Iwai, D., Itoh, Y. (2026). Augmenting Reality with Shitsukan. In: Nishida, S., Nishino, K. (eds) Shitsukan—Understanding and Manipulating Material and Quality Perception. Springer, Singapore.
@@ -61,6 +64,7 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 1. 中島功陽, Shiva Sinaei, 楠山弘基, 岩井大輔, 中村友哉, “レンズレスカメラを用いたホログラフィックテレプレゼンス,” 第70回システム制御情報学会研究発表講演会, pp. 761-766, 2026.
 1. 川島大空, 岩井大輔, “聴覚提示とプロジェクションマッピングによるクロスモーダル統合を用いた物体の質感変調,” 第70回システム制御情報学会研究発表講演会, pp. 756-760, 2026.
 1. 染川 侑太, 雨坂 宇宙, 岩井 大輔, “耳周辺脳波を用いたジェスチャ動作と日常動作の識別,” マルチメディア，分散，協調とモバイル(DICOMO2026)シンポジウム, pp. 1401 - 1410
+1. 暮坪 秀哉, 雨坂 宇宙, Fengzhou Liang, Tian Min, 杉浦 裕太, 岩井 大輔,"カメラ及びIMUセンサ搭載ヒアラブルデバイスを用いた装着者の三次元姿勢推定" マルチメディア，分散，協調とモバイル(DICOMO2026)シンポジウム, pp. 770 - 778
 
 #### 解説記事
 1. 日浦慎作, 岩井大輔, 黒木忍, 延原章平, 溝上陽子, 南本敬史, “質感研究プロジェクトにおける3Dプリンター活用とその効果,” AMフューチャー, Vol.2, No.1, pp. 57-62, 2026.
@@ -168,4 +172,6 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 1. [招待講演] 中村友哉, "計算機を駆使したレンズレスイメージング," 近畿化学協会 エレクトロニクス部会 2025年度第1回研究会, 2025. (2025年6月4日)
 1. [招待講演] 中村友哉, "符号化開口を用いたレンズレスイメージング," 第177回微小光学研究会, 2025. (2025年12月22日)
 1. [招待講演] 楠山弘基, "A Multi-aperture Coaxial Projector Balancing Shadow Suppression and Deblurring," Visual Computing 2025, 2025. (2025年9月9日)
+
+***
 
