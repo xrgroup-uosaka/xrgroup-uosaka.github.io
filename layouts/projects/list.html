@@ -40,15 +40,77 @@
 </article>
 
 <script>
+/* Category filter with a smooth FLIP transition: staying cards slide to their
+   new grid positions, leaving cards fade out, entering cards fade in. */
 (function(){
-  var root = document.querySelector('.projects-list .pgallery-filters');
-  if(!root) return;
-  var cards = document.querySelectorAll('.pgallery .pcard');
-  root.addEventListener('click', function(e){
+  var wrap = document.querySelector('.projects-list');
+  if(!wrap) return;
+  var filters = wrap.querySelector('.pgallery-filters');
+  var gallery = wrap.querySelector('.pgallery');
+  if(!filters || !gallery) return;
+  var cards = [].slice.call(gallery.querySelectorAll('.pcard'));
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DUR = 380, EASE = 'cubic-bezier(.22,.61,.36,1)';
+  var current = '*', gen = 0;
+
+  function match(c, f){ return f === '*' || c.classList.contains(f); }
+  function clearInline(c){
+    var s = c.style;
+    s.transition = s.transform = s.opacity = '';
+    s.position = s.top = s.left = s.width = s.margin = s.zIndex = '';
+    c.classList.remove('is-leaving');
+  }
+  function finalize(f){
+    cards.forEach(function(c){
+      clearInline(c);
+      if(match(c, f)) c.removeAttribute('hidden'); else c.setAttribute('hidden','');
+    });
+    gallery.style.position = '';
+  }
+
+  function apply(f){
+    if(reduce){ finalize(f); current = f; return; }
+    finalize(current);                       // snap any in-flight animation to a clean baseline
+
+    var grect = gallery.getBoundingClientRect();
+    var first = new Map();
+    cards.forEach(function(c){ if(!c.hasAttribute('hidden')) first.set(c, c.getBoundingClientRect()); });
+
+    var leaving  = cards.filter(function(c){ return first.has(c) && !match(c, f); });
+    var entering = cards.filter(function(c){ return !first.has(c) && match(c, f); });
+    var staying  = cards.filter(function(c){ return first.has(c) && match(c, f); });
+
+    gallery.style.position = 'relative';
+    leaving.forEach(function(c){                       // pull out of flow, pin in place to fade
+      var r = first.get(c), s = c.style;
+      s.position = 'absolute'; s.margin = '0'; s.zIndex = '0';
+      s.top = (r.top - grect.top) + 'px'; s.left = (r.left - grect.left) + 'px'; s.width = r.width + 'px';
+      c.classList.add('is-leaving');
+    });
+    entering.forEach(function(c){ c.removeAttribute('hidden'); c.style.opacity = '0'; c.style.transform = 'scale(.94)'; });
+
+    gallery.offsetHeight;                               // force reflow -> LAST positions
+    staying.forEach(function(c){
+      var last = c.getBoundingClientRect(), fr = first.get(c);
+      c.style.transition = 'none';
+      c.style.transform = 'translate(' + (fr.left - last.left) + 'px,' + (fr.top - last.top) + 'px)';
+    });
+
+    current = f;
+    var token = ++gen;
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){
+      staying.forEach(function(c){ c.style.transition = 'transform ' + DUR + 'ms ' + EASE; c.style.transform = ''; });
+      entering.forEach(function(c){ c.style.transition = 'transform ' + DUR + 'ms ' + EASE + ', opacity ' + DUR + 'ms ease'; c.style.transform = ''; c.style.opacity = '1'; });
+      leaving.forEach(function(c){ c.style.transition = 'transform ' + DUR + 'ms ' + EASE + ', opacity ' + DUR + 'ms ease'; c.style.transform = 'scale(.94)'; c.style.opacity = '0'; });
+    }); });
+
+    setTimeout(function(){ if(token === gen) finalize(f); }, DUR + 60);
+  }
+
+  filters.addEventListener('click', function(e){
     var btn = e.target.closest('.pgallery-filter'); if(!btn) return;
-    root.querySelectorAll('.pgallery-filter').forEach(function(b){ b.classList.toggle('is-active', b===btn); });
-    var f = btn.getAttribute('data-filter');
-    cards.forEach(function(c){ c.hidden = !(f==='*' || c.classList.contains(f)); });
+    filters.querySelectorAll('.pgallery-filter').forEach(function(b){ b.classList.toggle('is-active', b === btn); });
+    apply(btn.getAttribute('data-filter'));
   });
 })();
 </script>
