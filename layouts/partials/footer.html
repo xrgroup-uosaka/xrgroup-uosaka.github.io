@@ -6,5 +6,8 @@
         {{ i18n "licensedUnder" }} <a href="{{ .url }}" rel="license" target="_blank">{{ .name }}</a>.
       {{- end }}
     </p>
+    <nav class="footer-links" aria-label="{{ i18n "privacyPolicy" }}">
+      <a href="{{ "privacy/" | relLangURL }}">{{ i18n "privacyPolicy" }}</a>
+    </nav>
   </div>
 </footer>
