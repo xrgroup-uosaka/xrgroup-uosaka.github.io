@@ -1,6 +1,6 @@
 ---
 title: "Breaking the Scalability Limit of Multi-Projector Calibration with Embedded Cameras"
-venue: "IEEE CVPR 2026 (Oral)"
+venue: "IEEE/CVF CVPR 2026 (Oral)"
 tags: [Projects, XR Displays]
 date: 2026-06-06T00:00:00+09:00
 paper_authors: "Takumi Kawano, Kohei Miura, Daisuke Iwai"
