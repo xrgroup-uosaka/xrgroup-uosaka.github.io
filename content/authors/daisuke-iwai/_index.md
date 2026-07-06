@@ -5,7 +5,7 @@ role: 教授
 social:
   - icon: house
     icon_pack: fas
-    link: https://daisukeiwai.org/ja/
+    link: https://diwai.github.io/
   - icon: google-scholar
     icon_pack: fab
     link: https://scholar.google.co.jp/citations?user=F0hxD5AAAAAJ
