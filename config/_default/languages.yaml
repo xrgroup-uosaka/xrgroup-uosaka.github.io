@@ -1,0 +1,18 @@
+# Site languages — Japanese at "/", English at "/en/"
+# Single content tree with filename-based translation:
+#   index.md = Japanese (default), index.en.md = English (co-located, shared images).
+ja:
+  languageName: 日本語
+  languageCode: ja
+  weight: 1
+  title: 大阪大学 基礎工学研究科 岩井研究室
+  params:
+    description: 大阪大学 基礎工学研究科 岩井研究室。プロジェクションマッピング、コンピュテーショナルイメージング、ウェアラブルコンピューティングなどXRの基盤技術から応用までを研究しています。
+
+en:
+  languageName: English
+  languageCode: en-us
+  weight: 2
+  title: UOsaka XR Group
+  params:
+    description: The XR Group at the University of Osaka (Iwai Laboratory), researching projection mapping, computational imaging, and wearable computing — from foundational XR technologies to applications.

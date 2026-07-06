@@ -1,0 +1,22 @@
+{{- /* Render HTML content as alternating full-width background bands.
+       Splits at each heading of `tag` (default "<h2"); the first visible band
+       is light. Strips <hr> at band boundaries (no divider where the colour
+       already switches). Inner content is wrapped in .prose for typography.
+       Call: {{ partial "banded.html" (dict "content" .Content "tag" "<h3") }} */ -}}
+{{- $content := printf "%s" .content -}}
+{{- $tag := .tag | default "<h2" -}}
+{{- $parts := split $content $tag -}}
+{{- $s := newScratch -}}
+{{- $s.Set "n" 0 -}}
+{{- range $idx, $p := $parts -}}
+  {{- $html := cond (eq $idx 0) $p (print $tag $p) -}}
+  {{- $html = replaceRE `(?s)^\s*(<hr[^>]*>\s*)+` "" $html -}}
+  {{- $html = replaceRE `(?s)(\s*<hr[^>]*>\s*)+$` "" $html -}}
+  {{- $html = trim $html " \n\r\t" -}}
+  {{- with $html -}}
+    {{- $n := $s.Get "n" -}}
+    {{- $alt := cond (eq (mod $n 2) 0) " is-light" "" -}}
+    <section class="band{{ $alt }}"><div class="band-inner prose">{{ . | safeHTML }}</div></section>
+    {{- $s.Set "n" (add $n 1) -}}
+  {{- end -}}
+{{- end -}}

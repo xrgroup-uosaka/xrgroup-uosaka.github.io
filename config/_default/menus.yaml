@@ -1,0 +1,25 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+main:
+  #- name: About
+  #  url: /
+  #  weight: 10
+  #- name: News
+  #  url: post
+  #  weight: 20
+  - name: Team
+    url: team
+    weight: 30
+  - name: Projects
+    url: projects
+    weight: 40
+  - name: Publications
+    url: publications
+    weight: 50
+  # Teaching (人材育成) is Japanese-only — no English page, so it is omitted here.
+  - name: Contact
+    url: /#contact
+    weight: 70

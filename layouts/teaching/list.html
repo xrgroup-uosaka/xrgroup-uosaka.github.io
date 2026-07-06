@@ -1,0 +1,26 @@
+{{ define "main" }}
+<article class="banded section-teaching">
+  <div class="band-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </div>
+
+  {{ partial "banded.html" (dict "content" .Content "tag" "<h3") }}
+
+  {{ $courses := sort (where site.RegularPages "Section" "teaching") "Date" "desc" }}
+  {{ with $courses }}
+  <section class="band"><div class="band-inner">
+    <ul class="course-list">
+      {{ range . }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          <span class="course-title">{{ .Title }}</span>
+          {{ with .Params.authors }}<span class="course-meta">{{ delimit . ", " }}</span>{{ end }}
+          {{ with .Date }}<span class="course-meta">{{ .Format "2006" }}</span>{{ end }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div></section>
+  {{ end }}
+</article>
+{{ end }}

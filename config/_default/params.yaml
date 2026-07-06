@@ -1,0 +1,11 @@
+# Site parameters (plain Hugo)
+
+# Footer
+copyrightNotice: 'XR Group, Graduate School of Engineering Science, University of Osaka'
+license:
+  name: CC BY-NC-ND 4.0
+  url: 'https://creativecommons.org/licenses/by-nc-nd/4.0/'
+footerLogoUrl: 'https://www.osaka-u.ac.jp/'
+
+# SEO defaults (per-language description lives in languages.yaml)
+orgName: 'Iwai Laboratory, University of Osaka'

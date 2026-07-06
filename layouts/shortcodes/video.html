@@ -1,0 +1,10 @@
+{{- /* Video with optional caption, mirroring {{< figure >}}.
+       Resolves src against page resources so it works on translated pages too.
+       Usage: {{< video src="clip.mp4" caption="..." >}}  (caption is optional) */ -}}
+{{- $src := .Get "src" | default (.Get 0) -}}
+{{- $url := $src -}}
+{{- with $.Page.Resources.GetMatch $src }}{{ $url = .RelPermalink }}{{ end -}}
+<figure class="proj-video">
+  <video src="{{ $url }}" playsinline autoplay loop muted width="100%"{{ with .Get "poster" }} poster="{{ . }}"{{ end }}></video>
+  {{- with .Get "caption" }}<figcaption>{{ . | markdownify }}</figcaption>{{ end -}}
+</figure>

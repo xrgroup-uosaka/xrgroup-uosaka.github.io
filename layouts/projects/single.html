@@ -1,0 +1,92 @@
+{{- define "main" -}}
+{{- $featured := .Resources.GetMatch "featured.*" -}}
+{{- $iconmap := dict
+    "Paper" "paper" "DOI" "paper"
+    "arXiv" "arxiv" "プレプリント" "arxiv" "Preprint" "arxiv"
+    "Code" "github" "コード" "github"
+    "Project" "globe" "プロジェクトページ" "globe"
+    "Press release" "newspaper" "プレスリリース" "newspaper"
+    "Talk video" "video" "講演動画" "video" "Supplementary video" "video" "補助動画" "video"
+    "Poster" "poster" "ポスター" "poster"
+-}}
+<article class="project-page">
+
+  <div class="project-head-wrap">
+    <header class="project-hero">
+      <h1 class="project-title">{{ .Title }}</h1>
+      {{ with .Params.venue }}<p class="project-venue">{{ . }}</p>{{ end }}
+      {{ with .Params.paper_authors }}<p class="project-authors">{{ . }}</p>{{ end }}
+      {{ with .Params.links }}
+        <div class="project-links">
+          {{ range . }}
+            {{- $ic := index $iconmap .label -}}
+            <a class="project-btn" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ with $ic }}{{ partial "icon-svg.html" . }}{{ end }}<span>{{ .label }}</span></a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </header>
+
+    {{ with $featured }}
+      {{ $big := .Fit "1600x900 Center" }}
+      <figure class="project-teaser"><img src="{{ $big.RelPermalink }}" alt="" loading="lazy"></figure>
+    {{ end }}
+  </div>
+
+  {{- /* Rewrite raw <video src="file.mp4"> relative paths to the resource's
+         absolute URL so they resolve on the English page too (bundle resources
+         are published only under the default-language path). */ -}}
+  {{- $content := printf "%s" .Content -}}
+  {{- range .Resources.Match "**.mp4" -}}
+    {{- $content = replace $content (printf "src=\"%s\"" .Name) (printf "src=\"%s\"" .RelPermalink) -}}
+  {{- end -}}
+  {{- /* Split body into sections at each <h3>; alternate section backgrounds. */ -}}
+  <div class="project-sections article-style">
+    {{- $parts := split $content "<h3" -}}
+    {{- range $idx, $p := $parts -}}
+      {{- $h := cond (eq $idx 0) $p (print "<h3" $p) -}}
+      {{- /* drop <hr> at band boundaries (the colour switch is the separator) */ -}}
+      {{- $h = replaceRE `(?s)^\s*(<hr[^>]*>\s*)+` "" $h -}}
+      {{- $h = replaceRE `(?s)(\s*<hr[^>]*>\s*)+$` "" $h -}}
+      {{- $h = trim $h " \n\r\t" -}}
+      {{- with $h -}}
+        {{- $alt := cond (eq (mod $idx 2) 1) "is-light" "" -}}
+        <section class="proj-section {{ $alt }}"><div class="proj-section-inner">{{ . | safeHTML }}</div></section>
+      {{- end -}}
+    {{- end -}}
+
+    {{ with .Params.bibtex }}
+    {{- $bibalt := cond (eq (mod (len $parts) 2) 1) "is-light" "" -}}
+    <section class="proj-section proj-bibtex {{ $bibalt }}">
+      <div class="proj-section-inner">
+        <h3>BibTeX</h3>
+        <div class="bibtex-wrap">
+          <button class="bibtex-copy" type="button" aria-label="Copy BibTeX">Copy</button>
+          <pre><code>{{ . }}</code></pre>
+        </div>
+      </div>
+    </section>
+    {{ end }}
+  </div>
+
+  {{ with .Parent }}
+  <div class="project-head-wrap">
+    <nav class="project-backnav"><a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a></nav>
+  </div>
+  {{ end }}
+</article>
+
+<script>
+(function(){
+  document.querySelectorAll('.bibtex-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var code = btn.parentElement.querySelector('code');
+      if(!code) return;
+      navigator.clipboard.writeText(code.textContent).then(function(){
+        var t = btn.textContent; btn.textContent = 'Copied!';
+        setTimeout(function(){ btn.textContent = t; }, 1500);
+      });
+    });
+  });
+})();
+</script>
+{{- end -}}

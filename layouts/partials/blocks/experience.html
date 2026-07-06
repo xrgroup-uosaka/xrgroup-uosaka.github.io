@@ -1,0 +1,15 @@
+{{- /* Timeline. Call with: (dict "items" .Params.items)
+       Each item: title, date_start (YYYY-MM-DD), description. */ -}}
+{{- $items := .items -}}
+<div class="timeline">
+  {{- range $items }}
+    <div class="tl-item">
+      <span class="tl-marker" aria-hidden="true"></span>
+      <div class="tl-card">
+        <h3 class="tl-title">{{ .title | markdownify }}</h3>
+        {{- with .date_start }}<p class="tl-date">{{ (time .).Format "2006.01" }}</p>{{ end }}
+        {{- with .description }}<div class="tl-desc">{{ . | markdownify }}</div>{{ end }}
+      </div>
+    </div>
+  {{- end }}
+</div>

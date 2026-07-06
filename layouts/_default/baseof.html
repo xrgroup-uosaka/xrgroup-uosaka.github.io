@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.LanguageCode | default .Site.Language.Lang }}">
+{{ partial "head.html" . }}
+<body>
+  <a class="skip-link" href="#main">{{ i18n "skipToContent" }}</a>
+  {{ partial "header.html" . }}
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  <button id="to-top" class="to-top" type="button" aria-label="{{ i18n "backToTop" }}" hidden>↑</button>
+
+  <script>
+    /* Remember an explicit EN/JA choice so the "/" auto-redirect respects it later. */
+    (function () {
+      var box = document.querySelector('.lang');
+      if (box) box.addEventListener('click', function (e) {
+        var a = e.target.closest('a'); if (!a) return;
+        var t = (a.textContent || '').trim().toLowerCase();
+        try { localStorage.setItem('preferredLang', t.indexOf('en') === 0 ? 'en' : 'ja'); } catch (_) {}
+      });
+    })();
+    /* Mobile nav toggle */
+    (function () {
+      var t = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+      if (t && n) t.addEventListener('click', function () {
+        var open = n.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+    /* Back to top */
+    (function () {
+      var b = document.getElementById('to-top'); if (!b) return;
+      function toggle() { b.hidden = window.scrollY < 400; }
+      window.addEventListener('scroll', toggle, { passive: true });
+      b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      toggle();
+    })();
+  </script>
+</body>
+</html>

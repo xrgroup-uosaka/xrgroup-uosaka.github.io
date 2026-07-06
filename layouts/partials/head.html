@@ -1,0 +1,66 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {{- if .IsHome }}
+  <script>
+    /* Static-site language routing: visitors landing on the Japanese home ("/")
+       are sent to "/en/" when their browser isn't Japanese. An explicit EN/JA
+       choice (stored in localStorage) always wins, and only "/" ever redirects. */
+    (function () {
+      try {
+        var p = location.pathname;
+        if (p !== '/' && p !== '/index.html') return;
+        var pref = localStorage.getItem('preferredLang');
+        if (pref === 'ja') return;
+        if (pref === 'en') { location.replace('/en/'); return; }
+        var langs = navigator.languages || [navigator.language || 'ja'];
+        if ((langs[0] || '').toLowerCase().indexOf('ja') !== 0) location.replace('/en/');
+      } catch (e) {}
+    })();
+  </script>
+  {{- end }}
+
+  {{- $title := .Title | default .Site.Title -}}
+  {{- if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+  {{- else -}}
+    <title>{{ $title }} · {{ .Site.Title }}</title>
+  {{- end }}
+  {{- $desc := .Description | default .Params.summary | default .Site.Params.description -}}
+  <meta name="description" content="{{ $desc }}">
+  {{ hugo.Generator }}
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ $title }}{{ end }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  {{- with (.Resources.GetMatch "featured.*") }}
+    {{- $img := .Fill "1200x630 Center" }}
+    <meta property="og:image" content="{{ $img.Permalink }}">
+    <meta name="twitter:card" content="summary_large_image">
+  {{- end }}
+
+  <!-- hreflang alternates -->
+  {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Site.Language.Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+
+  <!-- Fonts: Open Sans (Latin) + Noto Sans JP (Japanese), matching diwai-website -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  {{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+  {{- with resources.Get "media/icon.png" }}
+  <link rel="icon" href="{{ .RelPermalink }}">
+  {{- end }}
+
+  {{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+  {{ end -}}
+</head>

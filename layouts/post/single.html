@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{- $featured := .Resources.GetMatch "featured.*" -}}
+<article class="banded post">
+  <div class="band-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+    <p class="page-date">{{ .Date.Format "2006.01.02" }}</p>
+    {{ with $featured }}
+      {{ $img := .Fit "1600x900 Center" }}
+      <figure class="post-featured"><img src="{{ $img.RelPermalink }}" alt="" loading="lazy"></figure>
+    {{ end }}
+  </div>
+
+  {{ partial "banded.html" (dict "content" .Content "tag" "<h3") }}
+
+  <div class="band-head">
+    <nav class="project-backnav"><a href="{{ "post/" | relLangURL }}">&larr; {{ i18n "news" }}</a></nav>
+  </div>
+</article>
+{{ end }}

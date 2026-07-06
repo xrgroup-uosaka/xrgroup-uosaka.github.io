@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="page container">
+  <header class="page-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </header>
+
+  {{ $posts := sort (where site.RegularPages "Section" "post") "Date" "desc" }}
+  {{ $paged := .Paginate $posts }}
+  <div class="news">
+    {{- range $paged.Pages }}
+      {{- $thumb := .Resources.GetMatch "featured.*" -}}
+      <a class="news-item" href="{{ .RelPermalink }}">
+        <div class="news-body">
+          <h3 class="news-title">{{ .Title }}</h3>
+          {{- with .Summary }}<p class="news-summary">{{ . | plainify | truncate 140 }}</p>{{ end }}
+          <p class="news-date">{{ .Date.Format "2006.01.02" }}</p>
+        </div>
+        {{- with $thumb }}{{ $t := .Fill "320x200 Center" }}<div class="news-thumb"><img src="{{ $t.RelPermalink }}" width="160" height="100" alt="" loading="lazy"></div>{{ end }}
+      </a>
+    {{- end }}
+  </div>
+
+  {{ partial "pagination.html" . }}
+</div>
+{{ end }}

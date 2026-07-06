@@ -1,0 +1,34 @@
+{{- $logo := resources.Get "media/logo.svg" -}}
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Title }}">
+      {{- with $logo }}<img src="{{ .RelPermalink }}" alt="{{ $.Site.Title }}" height="42">{{ else }}{{ $.Site.Title }}{{ end -}}
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="{{ i18n "toggleNav" }}" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="site-nav" class="nav" aria-label="{{ i18n "primaryNav" }}">
+      {{- $cur := . -}}
+      {{ range .Site.Menus.main }}
+        {{ $active := or ($cur.IsMenuCurrent "main" .) ($cur.HasMenuCurrent "main" .) }}
+        <a href="{{ .URL | relLangURL }}"{{ if $active }} class="is-active" aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+
+      <span class="lang" aria-label="{{ i18n "language" }}">
+        {{- $p := . -}}
+        {{ range .Site.Languages }}
+          {{- $lang := . -}}
+          {{- $target := ($lang.Lang | relLangURL) -}}
+          {{- if eq $lang.Lang $p.Site.Language.Lang -}}
+            {{- $target = $p.Permalink -}}
+          {{- else -}}
+            {{- with index (where $p.AllTranslations "Site.Language.Lang" $lang.Lang) 0 -}}{{- $target = .Permalink -}}{{- end -}}
+          {{- end -}}
+          <a href="{{ $target }}"{{ if eq $lang.Lang $p.Site.Language.Lang }} class="is-active" aria-current="true"{{ end }}>{{ if eq $lang.Lang "en" }}EN{{ else }}JA{{ end }}</a>
+        {{ end }}
+      </span>
+    </nav>
+  </div>
+</header>

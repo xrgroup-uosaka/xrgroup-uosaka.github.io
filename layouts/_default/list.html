@@ -1,0 +1,8 @@
+{{ define "main" }}
+<article class="banded section-{{ .Section }}">
+  <div class="band-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </div>
+  {{ partial "banded.html" (dict "content" .Content "tag" "<h3") }}
+</article>
+{{ end }}

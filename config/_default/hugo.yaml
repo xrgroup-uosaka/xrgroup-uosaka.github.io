@@ -1,0 +1,53 @@
+# Core Hugo configuration (plain Hugo — no theme modules)
+title: UOsaka XR Group
+baseURL: 'https://www.xr.sys.es.osaka-u.ac.jp/'
+
+# --- Languages: Japanese at "/", English at "/en/" ---
+defaultContentLanguage: ja
+defaultContentLanguageInSubdir: false
+hasCJKLanguage: true
+
+# --- Build ---
+enableEmoji: true
+enableRobotsTXT: true
+enableGitInfo: false
+summaryLength: 30
+removePathAccents: true
+timeout: 600000
+
+pagination:
+  pagerSize: 12
+
+# No taxonomy/term listing pages (research-page filtering is client-side)
+disableKinds: [taxonomy, term]
+
+outputs:
+  home: [HTML, RSS]
+  section: [HTML]
+
+imaging:
+  resampleFilter: lanczos
+  quality: 82
+  anchor: smart
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true          # content relies on raw HTML (video, iframe, div, br)
+    parser:
+      attribute:
+        title: true
+        block: true
+    renderHooks:
+      # Content was authored without render hooks (Blox). Keep links/images as
+      # literal passthrough so relative links like `../teaching` render verbatim.
+      link:
+        enableDefault: false
+      image:
+        enableDefault: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
+minify:
+  disableXML: true

@@ -1,0 +1,4 @@
+{{ define "main" }}
+  {{ partial "hero-slider.html" . }}
+  {{ partial "banded.html" (dict "content" .Content "tag" "<h2") }}
+{{ end }}

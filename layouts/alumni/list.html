@@ -1,0 +1,8 @@
+{{ define "main" }}
+<article class="banded section-alumni">
+  <div class="band-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </div>
+  {{ partial "blocks/people.html" (dict "page" . "groups" .Params.groups "intro" .Content) }}
+</article>
+{{ end }}

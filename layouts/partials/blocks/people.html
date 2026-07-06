@@ -1,0 +1,48 @@
+{{- /* People grid grouped by user_groups, each group rendered as an
+       alternating background band. Optional `intro` (rendered HTML) becomes
+       the first band. Call:
+       (dict "page" . "groups" .Params.groups "intro" .Content) */ -}}
+{{- $groups := .groups -}}
+{{- $intro := .intro -}}
+{{- $all := where (where site.Pages "Section" "authors") "Params.user_groups" "!=" nil -}}
+{{- $s := newScratch -}}{{- $s.Set "n" 0 -}}
+<div class="people">
+  {{- with $intro -}}
+    {{- $t := trim (printf "%s" .) " \n\r\t" -}}
+    {{- with $t -}}
+      {{- $alt := cond (eq (mod ($s.Get "n") 2) 0) " is-light" "" -}}
+      <section class="band{{ $alt }}"><div class="band-inner prose">{{ . | safeHTML }}</div></section>
+      {{- $s.Set "n" (add ($s.Get "n") 1) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $groups -}}
+    {{- $g := . -}}
+    {{- $members := sort (where $all "Params.user_groups" "intersect" (slice $g)) ".Params.last_name" -}}
+    {{- with $members -}}
+      {{- $alt := cond (eq (mod ($s.Get "n") 2) 0) " is-light" "" -}}
+      <section class="band people-group{{ $alt }}">
+        <div class="band-inner">
+          <h2 class="people-group-title">{{ $g }}</h2>
+          <div class="people-grid">
+            {{- range . }}
+              {{- $avatar := .Resources.GetMatch "avatar.*" -}}
+              <div class="person">
+                <div class="person-photo">
+                  {{- with $avatar }}{{ $a := .Fill "240x240 Center" }}<img src="{{ $a.RelPermalink }}" width="120" height="120" alt="{{ $.Title }}" loading="lazy">{{ else }}<span class="person-photo-ph" aria-hidden="true">{{ substr .Title 0 1 }}</span>{{ end -}}
+                </div>
+                <p class="person-name">{{ .Title }}</p>
+                {{- with .Params.role }}<p class="person-role">{{ . | safeHTML }}</p>{{ end }}
+                {{- with .Params.social }}
+                  <p class="person-social">
+                    {{- range $sc := . }}{{ with $sc.link }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $sc.icon }}">{{ partial "icon-svg.html" $sc.icon }}</a>{{ end }}{{ end -}}
+                  </p>
+                {{- end }}
+              </div>
+            {{- end }}
+          </div>
+        </div>
+      </section>
+      {{- $s.Set "n" (add ($s.Get "n") 1) -}}
+    {{- end -}}
+  {{- end -}}
+</div>

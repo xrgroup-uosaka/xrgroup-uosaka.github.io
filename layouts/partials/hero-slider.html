@@ -1,0 +1,47 @@
+{{- /* Full-width hero carousel from .Params.slides.
+       Each slide: title, text, image (path under assets/media/), position. */ -}}
+{{- $slides := .Params.slides -}}
+{{- with $slides }}
+<section class="hero" aria-roledescription="carousel">
+  <div class="hero-track">
+    {{- range $i, $s := . }}
+      {{- $img := resources.Get (printf "media/%s" $s.image) -}}
+      <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}" data-index="{{ $i }}"{{ with $img }} style="background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)), url('{{ (.Fill "1920x1080 Center").RelPermalink }}');"{{ end }}>
+        <div class="hero-caption container">
+          <h2 class="hero-title">{{ $s.title }}</h2>
+          {{- with $s.text }}<p class="hero-text">{{ . }}</p>{{ end }}
+        </div>
+      </div>
+    {{- end }}
+  </div>
+  {{- if gt (len .) 1 }}
+  <button class="hero-nav hero-prev" type="button" aria-label="Previous">&#8249;</button>
+  <button class="hero-nav hero-next" type="button" aria-label="Next">&#8250;</button>
+  <div class="hero-dots">
+    {{- range $i, $s := . }}<button class="hero-dot{{ if eq $i 0 }} is-active{{ end }}" type="button" data-index="{{ $i }}" aria-label="Slide {{ add $i 1 }}"></button>{{ end }}
+  </div>
+  {{- end }}
+</section>
+<script>
+(function(){
+  var hero = document.currentScript.previousElementSibling;
+  if(!hero || hero.dataset.init) return; hero.dataset.init='1';
+  var slides = hero.querySelectorAll('.hero-slide');
+  var dots = hero.querySelectorAll('.hero-dot');
+  if(slides.length < 2) return;
+  var cur = 0, timer;
+  function go(n){
+    cur = (n + slides.length) % slides.length;
+    slides.forEach(function(s,i){ s.classList.toggle('is-active', i===cur); });
+    dots.forEach(function(d,i){ d.classList.toggle('is-active', i===cur); });
+  }
+  function next(){ go(cur+1); }
+  function start(){ timer = setInterval(next, 5000); }
+  function reset(){ clearInterval(timer); start(); }
+  hero.querySelector('.hero-next').addEventListener('click', function(){ next(); reset(); });
+  hero.querySelector('.hero-prev').addEventListener('click', function(){ go(cur-1); reset(); });
+  dots.forEach(function(d){ d.addEventListener('click', function(){ go(+d.dataset.index); reset(); }); });
+  start();
+})();
+</script>
+{{- end }}

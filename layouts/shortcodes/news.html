@@ -1,0 +1,4 @@
+{{- $count := int (.Get "count" | default 5) -}}
+{{- partial "news-list.html" (dict "page" .Page "count" $count) -}}
+{{- $morePost := "post/" | relLangURL -}}
+<p class="more-link"><a href="{{ $morePost }}">{{ i18n "allPosts" }} &rarr;</a></p>

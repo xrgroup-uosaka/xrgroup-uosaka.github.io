@@ -1,0 +1,8 @@
+{{ define "main" }}
+<article class="banded section-history">
+  <div class="band-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </div>
+  <section class="band is-light"><div class="band-inner">{{ partial "blocks/experience.html" (dict "items" .Params.items) }}</div></section>
+</article>
+{{ end }}

@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="copyright">
+      © {{ now.Year }} {{ .Site.Params.copyrightNotice }}.
+      {{- with .Site.Params.license }}
+        {{ i18n "licensedUnder" }} <a href="{{ .url }}" rel="license" target="_blank">{{ .name }}</a>.
+      {{- end }}
+    </p>
+  </div>
+</footer>
