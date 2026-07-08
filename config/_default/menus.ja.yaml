@@ -10,12 +10,9 @@ main:
   - name: チーム　
     url: team
     weight: 30
-  - name: 研究業績　
+  - name: 研究業績
     url: publications
     weight: 50
-  - name: 人材育成　
-    url: teaching
-    weight: 60
-  - name: お問合せ　
+  - name: お問合せ
     url: /#contact
     weight: 70
