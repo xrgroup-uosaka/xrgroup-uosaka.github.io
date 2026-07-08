@@ -7,7 +7,7 @@ main:
   - name: プロジェクト
     url: projects
     weight: 40
-  - name: チーム　
+  - name: チーム
     url: team
     weight: 30
   - name: 研究業績
