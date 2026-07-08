@@ -15,16 +15,16 @@ slides:
 
 ## Enhancing Human and Societal Potential via the Integration of the Physical and Cyber Worlds
 
-Cutting-edge virtual reality (VR) technology allows us to immerse ourselves in computer-generated cyber worlds. For example, it enables real-time communication as though distant individuals were face-to-face, provides a safe environment for training otherwise too dangerous in reality, and lets designers experiment freely with form and texture without having to build physical prototypes. Augmented reality (AR) technology takes this one step further by incorporating the flexibility of cyber worlds into the physical world—enhancing our senses and abilities, and enabling us to transform real environments at will.
+Virtual and augmented reality (XR) technologies seamlessly integrate the physical and cyber worlds to expand human perception, communication, and creativity. They enable immersive remote interaction, safe training, intuitive design exploration, and enhanced everyday experiences.
 
-We draw on a broad spectrum of academic disciplines—sensing, human interface, electronics, control theory, systems optimization, signal processing, applied physics, optics, vision science, cognitive science, computer vision, computer graphics, and machine learning—to conduct XR research on:
+Our research brings together sensing, human interfaces, optics, computer vision, computer graphics, machine learning, cognitive science, and related disciplines to develop:
 
-- Projection mapping technologies for a natural and universal VR/AR experience,
-- New computational imaging and display technologies that fully capture and faithfully recreate real-world environments in three dimensions,
-- Wearable computing systems that sense user intent and deliver information unobtrusively in daily life, and
-- The founding of a new academic field, "Shitsukan Science", dedicated to elucidating the innate human ability to discern the intrinsic qualities of objects.
+- Projection mapping for natural and universal XR experiences,
+- Computational imaging and display technologies that capture and recreate the real world in three dimensions,
+- Wearable computing systems that unobtrusively understand user intent and provide context-aware support, and
+- *Shitsukan Science*, a new interdisciplinary field that explores how humans perceive the intrinsic qualities of objects.
 
-We apply these findings in diverse areas—including healthcare, design, education, training, remote communication, consumer electronics, museums, human-computer interaction, digital fabrication, life sciences, and animal behavior research—while partnering with experts across multiple industries and fields. Our ultimate goal is to enhance quality of life (QoL) through innovative collaboration.
+Through collaborations across academia and industry, we apply these technologies to healthcare, education, design, communication, manufacturing, and other fields, with the ultimate goal of enhancing quality of life.
 
 ## News
 
