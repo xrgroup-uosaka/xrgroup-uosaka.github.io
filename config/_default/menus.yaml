@@ -13,13 +13,21 @@ main:
   - name: Team
     url: team
     weight: 30
+    params:
+      icon: people
   - name: Projects
     url: projects
     weight: 40
+    params:
+      icon: grid
   - name: Publications
     url: publications
     weight: 50
+    params:
+      icon: file-text
   # Teaching (人材育成) is Japanese-only — no English page, so it is omitted here.
   - name: Contact
     url: /#contact
     weight: 70
+    params:
+      icon: at

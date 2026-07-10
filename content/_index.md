@@ -21,19 +21,19 @@ slides:
 
 これらの成果を、ヘルスケア、デザイン、教育、訓練、遠隔対話、電化製品、博物館、ヒューマンコンピュータインタラクション、デジタルファブリケーション、生命科学、動物行動学といった様々な応用領域にアプローチしています。多様な産業分野・研究領域のパートナーとの共創により、生活の質 (QoL) 向上を目指して活動しています。
 
-## News
+## お知らせ
 
 {{< news count="5" >}}
 
 <div class="contact-cols" id="contact">
 <div class="contact-col">
 
-### お問合せ
+### お問い合わせ
 
 [大阪大学](https://www.osaka-u.ac.jp/ja/) | [基礎工学部・大学院基礎工学研究科](https://www.es.osaka-u.ac.jp/ja/) | 岩井研究室<br>
 {{< icon name="location-dot" >}} 〒560-8531 大阪府豊中市待兼山町1-3-D449<br>
 {{< icon name="phone" >}} 06-6850-6373<br>
-{{< icon name="envelope" >}} staff [at] xr.sys.es.osaka-u.ac.jp<br>
+{{< icon name="mail-line" >}} staff [at] xr.sys.es.osaka-u.ac.jp<br>
 ※ [at] を＠（アットマーク）に置き換えてご利用ください。
 
 </div>

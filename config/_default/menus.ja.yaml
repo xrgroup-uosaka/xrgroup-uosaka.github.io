@@ -7,12 +7,20 @@ main:
   - name: プロジェクト
     url: projects
     weight: 40
+    params:
+      icon: grid
   - name: チーム
     url: team
     weight: 30
+    params:
+      icon: people
   - name: 研究業績
     url: publications
     weight: 50
-  - name: お問合せ
+    params:
+      icon: file-text
+  - name: お問い合わせ
     url: /#contact
     weight: 70
+    params:
+      icon: at

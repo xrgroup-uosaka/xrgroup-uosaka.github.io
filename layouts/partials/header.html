@@ -13,7 +13,7 @@
       {{- $cur := . -}}
       {{ range .Site.Menus.main }}
         {{ $active := or ($cur.IsMenuCurrent "main" .) ($cur.HasMenuCurrent "main" .) }}
-        <a href="{{ .URL | relLangURL }}"{{ if $active }} class="is-active" aria-current="page"{{ end }}>{{ .Name }}</a>
+        <a href="{{ .URL | relLangURL }}"{{ if $active }} class="is-active" aria-current="page"{{ end }}>{{ with .Params.icon }}{{ partial "icon-svg.html" . }}{{ end }}{{ .Name }}</a>
       {{ end }}
 
       <span class="lang" aria-label="{{ i18n "language" }}">

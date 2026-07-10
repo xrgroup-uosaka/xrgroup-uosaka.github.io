@@ -5,6 +5,7 @@
        Call: {{ partial "banded.html" (dict "content" .Content "tag" "<h3") }} */ -}}
 {{- $content := printf "%s" .content -}}
 {{- $tag := .tag | default "<h2" -}}
+{{- $firstClass := .firstClass | default "" -}}
 {{- $parts := split $content $tag -}}
 {{- $s := newScratch -}}
 {{- $s.Set "n" 0 -}}
@@ -16,7 +17,8 @@
   {{- with $html -}}
     {{- $n := $s.Get "n" -}}
     {{- $alt := cond (eq (mod $n 2) 0) " is-light" "" -}}
-    <section class="band{{ $alt }}"><div class="band-inner prose">{{ . | safeHTML }}</div></section>
+    {{- $first := cond (and (eq $n 0) (ne $firstClass "")) (printf " %s" $firstClass) "" -}}
+    <section class="band{{ $alt }}{{ $first }}"><div class="band-inner prose">{{ . | safeHTML }}</div></section>
     {{- $s.Set "n" (add $n 1) -}}
   {{- end -}}
 {{- end -}}

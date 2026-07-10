@@ -31,7 +31,7 @@ Through collaborations across academia and industry, we apply these technologies
 ### Contact
 
 Iwai Lab, [Graduate School of Engineering Science](https://www.es.osaka-u.ac.jp/en/), [University of Osaka](https://www.osaka-u.ac.jp/en/)<br>
-{{< icon name="envelope" >}} staff [at] xr.sys.es.osaka-u.ac.jp<br>
+{{< icon name="mail-line" >}} staff [at] xr.sys.es.osaka-u.ac.jp<br>
 {{< icon name="phone" >}} +81-(0)6-6850 6373<br>
 {{< icon name="location-dot" >}} 1-3-D449 Machikaneyama, Toyonaka, Osaka 560-8531, Japan
 

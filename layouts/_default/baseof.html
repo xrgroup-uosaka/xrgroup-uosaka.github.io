@@ -49,6 +49,21 @@
       b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
       toggle();
     })();
+    /* Reveal on scroll: below-fold sections/cards fade up as they enter view.
+       Above-fold items are shown immediately (no hide) so there is no flash. */
+    (function () {
+      if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var targets = document.querySelectorAll('.band, .pcard, .news-item, .tl-item');
+      if (!targets.length) return;
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+      }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+      var vh = window.innerHeight;
+      targets.forEach(function (t) {
+        if (t.getBoundingClientRect().top < vh * 0.9) { t.classList.add('is-in'); return; }
+        t.classList.add('reveal'); io.observe(t);
+      });
+    })();
   </script>
 </body>
 </html>
