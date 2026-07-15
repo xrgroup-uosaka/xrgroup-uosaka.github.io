@@ -50,7 +50,7 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 1. Ryu Naitou, Takashi Amesaka, Tian Min, Hiroki Watanabe, Yuta Sugiura, "AudioPIN: A Spatial Audio-based PIN-like Authentication System." In Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems 2026.
 1. Kousei Nagayama, Kazuya Ishikawa, Takashi Amesaka, Buntarou Shizuki, “Ear Lock+: A Personal Authentication Method for Hearables Using Sound Leakage Signals Allowing Hand Motion", Augmented Humans 2026 Poster and Demo track (4 pages) (17 March 2026).
 1. Hodaka Kawachi, José Reinaldo Cunha Santos A. V. Silva Neto, Yasushi Yagi, Hajime Nagahara, and Tomoya Nakamura, "Single-Image Depth from Defocus with Coded Aperture and Diffusion Posterior Sampling," IEEE International Conference on Computational Photography (ICCP), poster presentation, Princeton, New Jersey, USA, Jul. 2026.
-1. José Reinaldo Cunha Santos A. V. Silva Neto, Hodaka Kawachi, Yasushi Yagi, and Tomoya Nakamura, "Null-Space Diffusion Distillation Unlocks Speed, Fidelity and Realism in Lensless Imaging," IEEE International Conference on Computational Photography (ICCP), oral presentation, Princeton, New Jersey, USA, Jul. 2026.
+1. José Reinaldo Cunha Santos A. V. Silva Neto, Hodaka Kawachi, Yasushi Yagi, and Tomoya Nakamura, "Null-Space Diffusion Distillation Unlocks Speed, Fidelity and Realism in Lensless Imaging," IEEE International Conference on Computational Photography (ICCP), oral presentation, Princeton, New Jersey, USA, Jul. 2026, pp. 154-164.
 
 #### 国内会議
 1. 向井拓海, 有川安信, 中村友哉, 山田龍弥, Alessio Morace, Lan Zechen, 岩本晃史, 藤岡慎介, 兒玉了祐, "マルチモードファイバーイメージングを用いた超高解像度中性子計測システムの開発," レーザー学会学術講演会第46回年次大会, C04-13p-IV-04, 2026.
