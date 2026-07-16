@@ -218,7 +218,7 @@ main { display: block; }
 /* ---------- project single (academic style) ---------- */
 .project-page { padding: 0; }
 /* header, teaser and back-nav sit in a centred column */
-.project-head-wrap { max-width: 820px; margin: 0 auto; padding: 2.6rem 1.25rem 0; }
+.project-head-wrap { max-width: 960px; margin: 0 auto; padding: 2.6rem 1.25rem 0; }
 .project-hero { text-align: center; margin-bottom: 1.8rem; }
 .project-title { font-size: 1.85rem; font-weight: 700; line-height: 1.35; color: var(--ink); margin: 0 auto .8rem; max-width: 22em; }
 .project-venue { font-size: .9rem; font-weight: 600; color: var(--accent); margin: 0 0 .55rem; }
@@ -236,10 +236,10 @@ main { display: block; }
 .proj-section, .band { padding: 2.4rem 1.25rem; }
 /* keep the side padding on the inner column (like .band-head) so the body text
    lines up with the page title instead of sitting 1.25rem further left */
-.band { padding-inline: 0; }
+.proj-section, .band { padding-inline: 0; }
 .proj-section.is-light, .band.is-light { background: #f5f6f8; }
 .proj-section-inner, .band-inner { max-width: 960px; margin: 0 auto; }
-.band-inner { padding-inline: 1.25rem; }
+.proj-section-inner, .band-inner { padding-inline: 1.25rem; }
 /* inside a band the colour switch is the separator — drop heading top rules */
 .band-inner > :first-child { margin-top: 0; }
 .band-inner.prose h2 { border-top: 0; padding-top: 0; margin-top: 0; }
