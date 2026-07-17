@@ -24,7 +24,7 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 1. **SCI学生発表賞**<br>
 ○川島大空, 岩井大輔, “聴覚提示とプロジェクションマッピングによるクロスモーダル統合を用いた物体の質感変調,” 第70回システム制御情報学会研究発表講演会, pp. 756-760, 2026. (2026年6月5日)
 1. **優秀プレゼンテーション賞**<br>
-○暮坪 秀哉, 雨坂 宇宙, Fengzhou Liang, Tian Min, 杉浦 裕太, 岩井 大輔,"カメラ及びIMUセンサ搭載ヒアラブルデバイスを用いた装着者の三次元姿勢推定" マルチメディア，分散，協調とモバイル(DICOMO2026)シンポジウム, pp. 770 - 778
+○暮坪 秀哉, 雨坂 宇宙, Fengzhou Liang, Tian Min, 杉浦 裕太, 岩井 大輔,"カメラ及びIMUセンサ搭載ヒアラブルデバイスを用いた装着者の三次元姿勢推定" マルチメディア，分散，協調とモバイル(DICOMO2026)シンポジウム, pp. 770 - 778（2026年6月26日）
 
 #### 著書
 1. Iwai, D., Itoh, Y. (2026). Augmenting Reality with Shitsukan. In: Nishida, S., Nishino, K. (eds) Shitsukan—Understanding and Manipulating Material and Quality Perception. Springer, Singapore.
