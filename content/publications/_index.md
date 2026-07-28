@@ -66,6 +66,7 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 1. 染川 侑太, 雨坂 宇宙, 岩井 大輔, “耳周辺脳波を用いたジェスチャ動作と日常動作の識別,” マルチメディア，分散，協調とモバイル(DICOMO2026)シンポジウム, pp. 1401 - 1410
 1. 暮坪 秀哉, 雨坂 宇宙, Fengzhou Liang, Tian Min, 杉浦 裕太, 岩井 大輔,"カメラ及びIMUセンサ搭載ヒアラブルデバイスを用いた装着者の三次元姿勢推定" マルチメディア，分散，協調とモバイル(DICOMO2026)シンポジウム, pp. 770 - 778
 1. 藤原滋, 河内穂高, Jose Reinaldo Cunha Santos A V Silva Neto, 八木康史, 中村友哉, "非反復的な出力制約充足を用いた深層レンズレスイメージング," 第29回画像の認識・理解シンポジウム (MIRU2026), 長崎, IS3-027, Aug. 2026.
+1. 河内穂高, Jose Reinaldo Cunha Santos A V Silva Neto, 八木康史, 長原一, 中村友哉, "符号化開口と拡散事後サンプリングによる単一画像Depth from Defocus," 第29回画像の認識・理解シンポジウム (MIRU2026), 長崎, IS3-007, Aug. 2026.
 
 #### 解説記事
 1. 日浦慎作, 岩井大輔, 黒木忍, 延原章平, 溝上陽子, 南本敬史, “質感研究プロジェクトにおける3Dプリンター活用とその効果,” AMフューチャー, Vol.2, No.1, pp. 57-62, 2026.
