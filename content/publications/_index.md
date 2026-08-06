@@ -35,6 +35,7 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 1. Kotaro Fujimura, Hiroki Kusuyama, Masaki Takeuchi, and Daisuke Iwai, “High-Contrast Projection Mapping under Light Field Illumination with LED Display and Aperiodic Lens Array,” IEEE Transactions on Visualization and Computer Graphics, Vol. 32, No. 5, pp. 4250-4259, 2026.
 1. Yoshiaki Maeda and Daisuke Iwai, "Projector radiometric compensation using a 2D spectroradiometer," Opt. Express 34, 15979-15993 (2026)
 1. Hodaka Kawachi, José Reinaldo Cunha Santos A. V. Silva Neto, Yasushi Yagi, Hajime Nagahara, and Tomoya Nakamura, "Single-Image Depth from Defocus with Coded Aperture and Diffusion Posterior Sampling," IEEE Transactions on Computational Imaging, 12, 1034-1045 (2026)
+1. Yuxuan Sun, Tian Min, Liwei Chan, Takashi Amesaka, and Yuta Sugiura. 2026. AirHook: Simulating Multi-directional Wind Around Ears to Enhance Presence in VR, Proceedings of the ACM on Human-Computer Interaction (PACMHCI), Vol. 10, No. 5, 2026.
 
 #### 国際会議
 1. Hiroki Kusuyama, Tomoya Nakamura, Daisuke Iwai, "Coded aperture optimization for mitigating aberration in large-format Fresnel lens towards shadowless projection mapping," Proc. SPIE 13821, Optical Architectures for Displays and Sensing in Augmented, Virtual, and Mixed Reality (AR, VR, MR) VII, 1382106 (4 pages) (5 March 2026)
