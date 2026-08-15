@@ -29,6 +29,7 @@
   {{- end }}
   {{- $desc := .Description | default .Params.summary | default .Site.Params.description -}}
   <meta name="description" content="{{ $desc }}">
+  <link rel="canonical" href="{{ .Permalink }}">
   {{ hugo.Generator }}
 
   <!-- Open Graph -->
