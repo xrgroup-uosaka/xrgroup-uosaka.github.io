@@ -11,16 +11,14 @@
   <button id="to-top" class="to-top" type="button" aria-label="{{ i18n "backToTop" }}" hidden>↑</button>
 
   <script>
-    /* Language switch: remember the EN/JA choice, then slide the knob to the
-       clicked side before navigating so the toggle animation is visible. */
+    /* Language switch: slide the knob to the clicked side before navigating
+       so the toggle animation is visible. */
     (function () {
       var box = document.querySelector('.lang');
       if (!box) return;
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       box.addEventListener('click', function (e) {
         var a = e.target.closest('a'); if (!a) return;
-        var t = (a.textContent || '').trim().toLowerCase();
-        try { localStorage.setItem('preferredLang', t.indexOf('en') === 0 ? 'en' : 'ja'); } catch (_) {}
         if (a.classList.contains('is-active')) { e.preventDefault(); return; }
         if (reduce) return;                       // no animation: navigate immediately
         e.preventDefault();
