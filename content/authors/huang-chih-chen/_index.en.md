@@ -1,5 +1,5 @@
 ---
-title: HUANG CHIH-CHEN
+title: CHIH-CHEN HUANG
 last_name: HUANG
 role: 
 social:
