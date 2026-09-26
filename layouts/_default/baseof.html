@@ -48,7 +48,9 @@
       toggle();
     })();
     /* Reveal on scroll: below-fold sections/cards fade up as they enter view.
-       Above-fold items are shown immediately (no hide) so there is no flash. */
+       Above-fold items are shown immediately (no hide) so there is no flash.
+       Temporarily disabled — see CLAUDE.md. */
+    /*
     (function () {
       if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       var targets = document.querySelectorAll('.band, .pcard, .news-item, .tl-item');
@@ -62,6 +64,7 @@
         t.classList.add('reveal'); io.observe(t);
       });
     })();
+    */
   </script>
 </body>
 </html>
