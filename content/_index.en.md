@@ -1,6 +1,6 @@
 ---
 title:
-intro_title: Enhancing Human and Societal Potential via the Integration of the Physical and Cyber Worlds
+intro_title: Bridging Reality and Cyberspace
 slides:
   - title: XR Displays
     text: Pursuing material realism for a perceptually natural integration of the physical and cyber worlds.
@@ -13,11 +13,11 @@ slides:
     image: homepage/wearablecomputing.jpg
 ---
 
-## Enhancing Human and Societal Potential via the Integration of the Physical and Cyber Worlds
+## Bridging Reality and Cyberspace
 
-Virtual and augmented reality (XR) technologies seamlessly integrate the physical and cyber worlds to expand human perception, communication, and creativity. They enable immersive remote interaction, safe training, intuitive design exploration, and enhanced everyday experiences.
+<strong>Virtual and augmented reality (XR) technologies</strong> seamlessly integrate the physical and cyber worlds to expand human perception, communication, and creativity. They enable immersive remote interaction, safe training, intuitive design exploration, and enhanced everyday experiences.
 
-Our research brings together sensing, human interfaces, optics, computer vision, computer graphics, machine learning, cognitive science, and related disciplines to develop projection mapping for natural and universal XR experiences, as well as computational imaging and display technologies that capture and recreate the real world in three dimensions. We also work on wearable computing systems that unobtrusively understand user intent and provide context-aware support, alongside *Shitsukan Science*, a new interdisciplinary field that explores how humans perceive the intrinsic qualities of objects.
+Our research brings together sensing, human interfaces, optics, computer vision, computer graphics, machine learning, cognitive science, and related disciplines to develop <strong>projection mapping</strong> for natural and universal XR experiences, as well as <strong>computational imaging and display technologies</strong> that capture and recreate the real world in three dimensions. We also work on <strong>wearable computing systems</strong> that unobtrusively understand user intent and provide context-aware support, alongside <strong>*Shitsukan Science*, a new interdisciplinary field that explores how humans perceive the intrinsic qualities of objects</strong>.
 
 Through collaborations across academia and industry, we apply these technologies to healthcare, education, design, communication, manufacturing, and other fields, with the ultimate goal of enhancing quality of life.
 

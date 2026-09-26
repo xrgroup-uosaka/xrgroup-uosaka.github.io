@@ -2,7 +2,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Title }}">
-      {{- with $logo }}<img src="{{ .RelPermalink }}" alt="{{ $.Site.Title }}" height="42">{{ else }}{{ $.Site.Title }}{{ end -}}
+      {{- with $logo }}<img src="{{ .RelPermalink }}" alt="{{ $.Site.Title }}" height="52">{{ else }}{{ $.Site.Title }}{{ end -}}
     </a>
 
     <button class="nav-toggle" type="button" aria-label="{{ i18n "toggleNav" }}" aria-controls="site-nav" aria-expanded="false">
