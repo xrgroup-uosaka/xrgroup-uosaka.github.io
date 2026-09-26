@@ -311,13 +311,9 @@ main { display: block; }
 .tl-desc p { margin: 0 0 .3rem; }
 .tl-desc ul { margin: .2rem 0 0; padding-inline-start: 1.1rem; }
 
-/* ---------- colourful section headings (accent → teal gradient text) ---------- */
-:root { --accent2: #0f9d8f; }
+/* ---------- section headings ---------- */
 .page-title, .band-inner.prose h2, .people-group-title {
-  width: fit-content;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
+  color: var(--accent);
 }
 
 /* ---------- soft cards + reveal on scroll (no coloured backgrounds) ---------- */
