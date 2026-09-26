@@ -245,15 +245,15 @@ main { display: block; }
 .band-head { max-width: 1100px; margin: 0 auto; padding: 2.6rem 1.25rem .4rem; }
 .band-head .post-featured { margin: 1.4rem 0 0; }
 .band-head .project-backnav { margin: 1.6rem 0 0; }
-/* homepage intro message: highlight key phrases in amber, marker-style (bottom half only) */
+/* homepage intro message: highlight key phrases in red, marker-style (bottom half only) */
 .band-msg strong {
-  color: #92400e;
-  background-image: linear-gradient(to top, rgba(217,119,6,.16) 50%, transparent 50%);
+  color: #b91c1c;
+  background-image: linear-gradient(to top, rgba(185,28,28,.08) 50%, transparent 50%);
   background-repeat: no-repeat;
 }
 
 /* research-output list: award names red, category sub-headings muted */
-.section-publications .band-inner strong { color: #dc3545; }
+.section-publications .band-inner strong { color: #b91c1c; }
 .section-publications .band-inner h4 { color: var(--muted); font-weight: 600; }
 .proj-section-inner > :first-child { margin-top: 0; }
 .proj-section-inner > :last-child { margin-bottom: 0; }
