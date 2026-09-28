@@ -355,6 +355,17 @@ main { display: block; }
 .page-title, .band-inner.prose h2, .people-group-title {
   color: var(--accent-ink);
 }
+/* decorative title separator: a drawn bar, not a dash character (never
+   mistaken for the kanji 一) */
+.title-dash {
+  display: inline-block;
+  width: 1.4em;
+  height: .1em;
+  min-height: 2px;
+  background: currentColor;
+  vertical-align: .32em;
+  margin-inline: .5em;
+}
 
 /* ---------- soft cards + reveal on scroll (no coloured backgrounds) ---------- */
 .pcard { box-shadow: 0 3px 14px -10px rgba(20,22,30,.22); }
