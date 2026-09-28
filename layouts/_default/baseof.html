@@ -10,6 +10,11 @@
   {{ partial "footer.html" . }}
   <button id="to-top" class="to-top" type="button" aria-label="{{ i18n "backToTop" }}" hidden>↑</button>
 
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" type="button" aria-label="{{ i18n "close" }}">&times;</button>
+    <img src="" alt="">
+  </div>
+
   <script>
     /* Language switch: slide the knob to the clicked side before navigating
        so the toggle animation is visible. */
@@ -65,6 +70,29 @@
       });
     })();
     */
+    /* Lightbox: click a content image (project/news photos) to view it enlarged */
+    (function () {
+      var box = document.getElementById('lightbox');
+      if (!box) return;
+      var img = box.querySelector('img');
+      var closeBtn = box.querySelector('.lightbox-close');
+      var targets = document.querySelectorAll('.project-teaser img, .proj-section-inner img, .post .post-featured img, .prose img');
+      function open(src, alt) {
+        img.src = src; img.alt = alt || '';
+        box.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        box.hidden = true; img.src = '';
+        document.body.style.overflow = '';
+      }
+      targets.forEach(function (t) {
+        t.addEventListener('click', function () { open(t.currentSrc || t.src, t.alt); });
+      });
+      box.addEventListener('click', close);
+      closeBtn.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) close(); });
+    })();
   </script>
 </body>
 </html>

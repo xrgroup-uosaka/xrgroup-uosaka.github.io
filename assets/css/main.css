@@ -94,6 +94,22 @@ a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-o
 .to-top:hover { color: var(--ink); border-color: var(--accent-ink); transform: translateY(-2px); }
 .to-top[hidden] { display: none; }
 
+/* ---------- lightbox (click a project/news photo to enlarge) ---------- */
+.project-teaser img, .proj-section-inner img, .post .post-featured img, .prose img { cursor: zoom-in; }
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(10,10,14,.88); padding: 2rem; cursor: zoom-out;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 95vw; max-height: 90vh; border-radius: 8px; box-shadow: 0 20px 60px -20px rgba(0,0,0,.6); cursor: zoom-out; }
+.lightbox-close {
+  position: absolute; top: 1rem; right: 1.2rem; width: 2.4rem; height: 2.4rem;
+  border-radius: 50%; border: 0; background: rgba(255,255,255,.12); color: #fff;
+  font-size: 1.5rem; line-height: 1; cursor: pointer; transition: background .15s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,.22); }
+
 /* ---------- generic page ---------- */
 main { display: block; }
 .page { padding-block: 2.6rem 1rem; }
@@ -113,16 +129,24 @@ main { display: block; }
 .prose a { text-decoration: underline; text-underline-offset: 2px; text-decoration-color: color-mix(in srgb, var(--accent-ink) 40%, transparent); }
 .prose a:hover { text-decoration-color: currentColor; }
 .prose strong { font-weight: 600; }
-.prose img, .prose video { border-radius: 8px; display: block; margin: 1.2rem auto; }
+.prose img, .prose video { max-height: 520px; width: auto; height: auto; border-radius: 8px; display: block; margin: 1.2rem auto; }
 .prose iframe { max-width: 100%; border-radius: 8px; margin: 1rem 0; }
 .prose hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .prose table { width: 100%; border-collapse: collapse; margin: 0 0 1.4rem; font-size: .86rem; }
 .prose th, .prose td { text-align: left; vertical-align: top; font-weight: 400; padding: .6rem .9rem .6rem 0; border-bottom: 1px solid var(--line); }
 .prose blockquote { margin: 0 0 1rem; padding: .8rem 1.1rem; background: var(--surface); border: 1px solid var(--line); border-inline-start: 2px solid var(--accent-ink); border-radius: 4px; }
 .prose blockquote p { margin: 0; }
+/* figure spans the full text column; the image inside stays centred */
 .prose figure { margin: 1.5rem auto; }
 .prose figure img { margin: 0 auto; }
-.prose figcaption { margin-top: .6rem; font-size: .74rem; color: var(--muted); text-align: center; line-height: 1.65; }
+.prose figcaption { margin-top: .6rem; text-align: center; font-style: italic; }
+/* built-in youtube shortcode inside prose content (news posts): same fixed-height fix as project pages */
+.prose div[style*="padding-bottom: 56.25%"] {
+  max-width: 925px;
+  margin-inline: auto;
+  height: 520px !important;
+  padding-bottom: 0 !important;
+}
 
 /* ---------- publications page ---------- */
 .publications h3 { font-size: 1.25rem; padding-bottom: .35rem; border-bottom: 1px solid var(--line); margin-top: 2.2rem; }
@@ -224,11 +248,11 @@ main { display: block; }
 .project-btn:hover { color: #fff; background: var(--accent-ink); border-color: var(--accent-ink); text-decoration: none; transform: translateY(-1px); }
 .project-btn .icon { width: 1.05em; height: 1.05em; flex: 0 0 auto; }
 .project-teaser { margin: 0 auto; }
-.project-teaser img { width: 100%; border-radius: 12px; border: 1px solid var(--line); display: block; }
+.project-teaser img { max-height: 520px; width: auto; max-width: 100%; height: auto; margin: 0 auto; border-radius: 12px; border: 1px solid var(--line); display: block; }
 
 /* full-width alternating background bands, content constrained inside.
    Shared by project pages (.proj-section) and all other pages (.band). */
-.project-sections { font-size: .84rem; line-height: 1.85; color: #24262c; }
+.project-sections { font-size: .9rem; line-height: 1.85; color: #24262c; }
 .proj-section, .band { padding: 2.4rem 1.25rem; }
 /* keep the side padding on the inner column (like .band-head) so the body text
    lines up with the page title instead of sitting 1.25rem further left */
@@ -245,10 +269,10 @@ main { display: block; }
 .band-head { max-width: 1100px; margin: 0 auto; padding: 2.6rem 1.25rem .4rem; }
 .band-head .post-featured { margin: 1.4rem 0 0; }
 .band-head .project-backnav { margin: 1.6rem 0 0; }
-/* homepage intro message: highlight key phrases in red, marker-style (bottom half only) */
+/* homepage intro message: highlight key phrases in navy, fluorescent-yellow marker (bottom half only) */
 .band-msg strong {
-  color: #b91c1c;
-  background-image: linear-gradient(to top, rgba(185,28,28,.08) 50%, transparent 50%);
+  color: var(--accent-ink);
+  background-image: linear-gradient(to top, rgba(250,255,0,.55) 50%, transparent 50%);
   background-repeat: no-repeat;
 }
 
@@ -261,10 +285,23 @@ main { display: block; }
 .proj-section-inner h4 { font-size: 1rem; font-weight: 700; color: var(--ink); margin: 1.7rem 0 .6rem; }
 .proj-section-inner p { margin: 0 0 1.1rem; }
 .proj-section-inner ul, .proj-section-inner ol { margin: 0 0 1.1rem; padding-inline-start: 1.3rem; }
-.proj-section-inner img, .proj-section-inner video { max-width: 100%; height: auto; border-radius: 10px; display: block; margin: 1.2rem auto; }
+.proj-section-inner img, .proj-section-inner video { max-height: 520px; width: auto; max-width: 100%; height: auto; border-radius: 10px; display: block; margin: 1.2rem auto; }
+/* figure spans the full text column; the image inside stays centred */
 .proj-section-inner figure { margin: 1.4rem auto 1.6rem; }
-.proj-section-inner figure.proj-video video { margin: 0; }
-.proj-section-inner figcaption { margin-top: .7rem; font-size: .74rem; line-height: 1.7; color: var(--muted); text-align: center; }
+.proj-section-inner figure.proj-video video { margin: 0 auto; }
+/* caption reads as regular body text (just centred), not a small grey caption */
+.proj-section-inner figcaption { margin-top: .7rem; text-align: center; font-style: italic; }
+/* built-in youtube shortcode: bare responsive-ratio div, no class to hook.
+   Percentage padding-bottom resolves against the *containing block's* width,
+   not this div's own (capped) width, so a plain max-width cap doesn't fix the
+   height — override with a literal height instead (YouTube's player letterboxes
+   to fit, it doesn't stretch), matching the ~520px cap used above. */
+.proj-section-inner div[style*="padding-bottom: 56.25%"] {
+  max-width: 925px;
+  margin-inline: auto;
+  height: 520px !important;
+  padding-bottom: 0 !important;
+}
 .proj-section-inner hr { border: 0; border-top: 1px solid var(--line); margin: 1.8rem 0; }
 
 /* BibTeX block */
@@ -279,10 +316,10 @@ main { display: block; }
 .project-backnav a:hover { color: var(--accent-ink); }
 
 /* ---------- post single ---------- */
-.post .post-featured { margin: 0 0 1.8rem; text-align: center; }
+.post .post-featured { margin: 0 auto 1.8rem; text-align: center; }
 /* Never upscale: low-resolution (privacy-reduced) images show at their natural
-   size and centred; large images are capped to the content width. */
-.post .post-featured img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); display: inline-block; }
+   size and centred; wide images are capped by height, not by the content width. */
+.post .post-featured img { max-height: 520px; width: auto; max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); display: inline-block; }
 
 /* ---------- people grid ---------- */
 .people { margin: 0; }
