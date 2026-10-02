@@ -16,5 +16,5 @@ social:
     icon_pack: fab
     link: https://github.com/youseegreen
 user_groups:
-  - 招へい教員・研究員
+  - クロスアポイントメント・招へいスタッフ
 ---

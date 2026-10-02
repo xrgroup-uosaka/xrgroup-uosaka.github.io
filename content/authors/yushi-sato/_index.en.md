@@ -16,5 +16,5 @@ social:
     icon_pack: fab
     link: https://github.com/youseegreen
 user_groups:
-  - Visiting Faculty / Researcher
+  - Cross-appointment / Visiting Researcher
 ---

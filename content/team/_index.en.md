@@ -2,7 +2,7 @@
 title: Team
 groups:
   - Staff
-  - Visiting Faculty / Researcher
+  - Cross-appointment / Visiting Researcher
   - PostDocs
   - PhD Students
   - Master Students (M2)

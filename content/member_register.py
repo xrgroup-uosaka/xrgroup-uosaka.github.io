@@ -335,7 +335,7 @@ class ProfileManager:
             "学部4年",
             "スタッフ",
             "ポスドク研究員",
-            "招へい教員・研究員",
+            "クロスアポイントメント・招へいスタッフ",
             "特任研究員S",
             "訪問学生",
         ]
@@ -359,7 +359,7 @@ class ProfileManager:
             "Undergraduate Students (B4)",
             "Staff",
             "PostDocs",
-            "Visiting Faculty / Researcher",
+            "Cross-appointment / Visiting Researcher",
             "Project Researcher (S)",
             "Visiting Students",
         ]

@@ -1,8 +1,0 @@
----
-title: HANG-YUN CHI
-last_name: CHI
-role: 
-social:
-user_groups:
-- Visiting Students
----

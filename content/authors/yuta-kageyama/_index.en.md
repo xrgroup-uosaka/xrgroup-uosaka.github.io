@@ -13,5 +13,5 @@ social:
   icon_pack: fab
   link: https://jp.linkedin.com/in/yuta-kageyama-327a862b2
 user_groups:
-  - Visiting Faculty / Researcher
+  - Cross-appointment / Visiting Researcher
 ---

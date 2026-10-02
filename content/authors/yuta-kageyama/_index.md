@@ -13,5 +13,5 @@ social:
   icon_pack: fab
   link: https://jp.linkedin.com/in/yuta-kageyama-327a862b2
 user_groups:
-- 招へい教員・研究員
+- クロスアポイントメント・招へいスタッフ
 ---
