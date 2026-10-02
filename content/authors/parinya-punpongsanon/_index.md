@@ -1,6 +1,6 @@
 ---
 title: Parinya Punpongsanon
-last_name: Punpongsanon
+last_name: 1_Punpongsanon
 role: 特任准教授
 social:
   - icon: house

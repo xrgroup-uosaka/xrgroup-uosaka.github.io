@@ -1,6 +1,6 @@
 ---
 title: Mariko Isogawa
-last_name: Isogawa
+last_name: 1_Isogawa
 role: Specially Appointed Associate Professor
 social:
   - icon: house

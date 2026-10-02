@@ -1,6 +1,6 @@
 ---
 title: Parinya Punpongsanon
-last_name: Punpongsanon
+last_name: 1_Punpongsanon
 role: Specially Appointed Associate Professor
 social:
   - icon: house

@@ -1,6 +1,6 @@
 ---
 title: 五十川麻理子
-last_name: 五十川
+last_name: 1_五十川
 role: 特任准教授
 social:
   - icon: house
