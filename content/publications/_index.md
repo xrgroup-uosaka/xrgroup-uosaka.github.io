@@ -29,6 +29,8 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 飛永颯眞, 水野大久真, 秋田智美, 渡邊眞也 (2026年9月16日)
 1. **優秀論文賞**<br>
 ○暮坪 秀哉, 雨坂 宇宙, Fengzhou Liang, Tian Min, 杉浦 裕太, 岩井 大輔,"カメラ及びIMUセンサ搭載ヒアラブルデバイスを用いた装着者の三次元姿勢推定" マルチメディア，分散，協調とモバイル(DICOMO2026)シンポジウム, pp. 770 - 778（2026年6月26日）
+1. **令和8年度科学技術分野の文部科学大臣表彰 若手科学者賞**<br>
+中村友哉 (2026年4月7日)
 
 #### 著書
 1. Iwai, D., Itoh, Y. (2026). Augmenting Reality with Shitsukan. In: Nishida, S., Nishino, K. (eds) Shitsukan—Understanding and Manipulating Material and Quality Perception. Springer, Singapore.
