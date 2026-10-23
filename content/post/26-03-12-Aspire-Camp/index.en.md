@@ -1,6 +1,6 @@
 ---
 title: "JST ASPIRE Research Camp"
-date: 2026-03-12T00:00:00+08:00
+date: 2026-03-12T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 Professor Iwai and PhD students Kusuyama, Takeuchi, Miura, and Sommart participated in a research camp organized as part of the JST ASPIRE project.

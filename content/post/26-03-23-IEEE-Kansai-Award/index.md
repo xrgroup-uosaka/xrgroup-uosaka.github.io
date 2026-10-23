@@ -1,6 +1,6 @@
 ---
 title: "IEEE 関西支部 学生研究奨励賞 受賞"
-date: 2026-03-23T00:00:02+08:00
+date: 2026-03-23T00:00:02+09:00
 ---
 <!-- 見出し文 -->
 博士学生の楠山が [IEEE 関西支部 学生研究奨励賞](https://www.ieee-jp.org/section/kansai/award/studentlist.html) を受賞しました。

@@ -1,6 +1,6 @@
 ---
 title: "Augmented Humans 2026 にてポスター発表を行いました"
-date: 2026-03-16T00:00:00+08:00
+date: 2026-03-16T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 博士学生の楠山、竹内、三浦が、OIST で開催された [Augmented Humans 2026](https://augmented-humans.org/) にてポスター発表を行いました。

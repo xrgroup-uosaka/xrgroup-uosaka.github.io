@@ -1,6 +1,6 @@
 ---
 title: "Three Presentations and One Award at the IEEE VR 2026 VR-HSA Workshop"
-date: 2026-03-22T00:00:00+08:00
+date: 2026-03-22T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 Master's students Imoto, Takeuchi, and Miura gave presentations at the [VR-HSA Workshop](https://sites.google.com/vogue.cs.titech.ac.jp/VR-HSA), held in conjunction with IEEE VR 2026. Imoto's paper received a Best Paper Honorable Mention Award.

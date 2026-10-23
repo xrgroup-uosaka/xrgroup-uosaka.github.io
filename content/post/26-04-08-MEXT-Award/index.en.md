@@ -1,6 +1,6 @@
 ---
 title: "The MEXT Young Scientists’ Award"
-date: 2026-04-07T00:00:00+08:00
+date: 2026-04-07T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 Associate Professor Nakamura has received the Young Scientists’ Award in the FY2026 Commendation for Science and Technology by the Minister of Education, Culture, Sports, Science and Technology (MEXT).

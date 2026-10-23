@@ -1,6 +1,6 @@
 ---
 title: "IEEE VR 2026 VR-HSA ワークショップにて発表3件＋受賞1件"
-date: 2026-03-22T00:00:00+08:00
+date: 2026-03-22T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 修士学生の井元、竹内、三浦が、IEEE VR 2026 併催の [VR-HSA ワークショップ](https://sites.google.com/vogue.cs.titech.ac.jp/VR-HSA)にてショートプレゼンおよびポスター発表を行いました。また、井元の論文が Best Paper Honorable Mention Award を受賞しました。

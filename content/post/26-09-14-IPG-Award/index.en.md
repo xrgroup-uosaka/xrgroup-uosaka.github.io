@@ -1,6 +1,6 @@
 ---
 title: "Mizuno Receives Group Work Excellence Award at the 26th IPG Workshop"
-date: 2026-09-14T00:00:00+08:00
+date: 2026-09-14T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 Fourth-year undergraduate student Mizuno received the Group Work Excellence Award at the [26th Information Photonics Group (IPG) Workshop (Autumn Retreat)](https://www.i-photonics.jp/meetings.html#20260914IPG).

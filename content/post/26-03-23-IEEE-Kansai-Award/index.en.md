@@ -1,6 +1,6 @@
 ---
 title: "Kusuyama Receives IEEE Kansai Section Student Paper Award"
-date: 2026-03-23T00:00:02+08:00
+date: 2026-03-23T00:00:02+09:00
 ---
 <!-- 見出し文 -->
 PhD student Kusuyama received the [IEEE Kansai Section Student Paper Award](https://www.ieee-jp.org/section/kansai/award/studentlist.html).

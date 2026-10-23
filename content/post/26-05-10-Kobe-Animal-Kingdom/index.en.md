@@ -1,6 +1,6 @@
 ---
 title: "Spring Excursion 2026"
-date: 2026-05-10T00:00:00+08:00
+date: 2026-05-10T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 We went on our spring excursion to [Kobe Animal Kingdom](https://www.kobe-oukoku.com/en/) in Kobe. We were greatly comforted and entertained by the many animals there.

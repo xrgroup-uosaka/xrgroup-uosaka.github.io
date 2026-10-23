@@ -1,6 +1,6 @@
 ---
 title: "XR Group Gave 2 Poster Presentations at Augmented Humans 2026"
-date: 2026-03-16T00:00:00+08:00
+date: 2026-03-16T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 PhD students Kusuyama, Takeuchi, and Miura presented their work in the poster track at [Augmented Humans 2026](https://augmented-humans.org/), held at OIST.

@@ -1,6 +1,6 @@
 ---
 title: "XR Group Gave 2 Oral Presentations at IEEE VR 2026"
-date: 2026-03-23T00:00:01+08:00
+date: 2026-03-23T00:00:01+09:00
 ---
 <!-- 見出し文 -->
 A PhD student Takeuchi and a master's student Fujimura gave oral presentations at [IEEE VR 2026](https://ieeevr.org/2026/).

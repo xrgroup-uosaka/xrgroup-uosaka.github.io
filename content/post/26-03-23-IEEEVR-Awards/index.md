@@ -1,6 +1,6 @@
 ---
 title: "IEEE VR 2026 ダブル受賞"
-date: 2026-03-23T00:00:00+08:00
+date: 2026-03-23T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 [IEEE VR 2026](https://ieeevr.org/2026/awards/conference-awards/) にて Best Paper Award および Honorable Mention Award を受賞しました。

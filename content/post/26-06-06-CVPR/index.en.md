@@ -1,6 +1,6 @@
 ---
 title: "Oral and Poster Presentations at CVPR 2026"
-date: 2026-06-06T00:00:01+08:00
+date: 2026-06-06T00:00:01+09:00
 ---
 <!-- 見出し文 -->
 At [CVPR 2026](https://cvpr.thecvf.com/Conferences/2026), our alumnus Takumi Kawano (M.S. 2025) gave an oral presentation and presented a poster; Project Researcher (S) Hodaka Kawachi and OB Imoto presented their posters in the Findings track.

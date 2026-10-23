@@ -1,6 +1,6 @@
 ---
 title: "XR Group Wins Two Awards at IEEE VR 2026"
-date: 2026-03-23T00:00:00+08:00
+date: 2026-03-23T00:00:00+09:00
 ---
 <!-- 見出し文 -->
 Two papers from the XR Group have received a Best Paper Award and an Honorable Mention at [IEEE VR 2026](https://ieeevr.org/2026/awards/conference-awards/).
