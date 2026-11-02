@@ -44,7 +44,6 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 1. Yuxuan Sun, Tian Min, Liwei Chan, Takashi Amesaka, and Yuta Sugiura. 2026. AirHook: Simulating Multi-directional Wind Around Ears to Enhance Presence in VR, Proceedings of the ACM on Human-Computer Interaction (PACMHCI), Vol. 10, No. 5, 2026.
 1. Shigeru Fujiwara, Hodaka Kawachi, José Reinaldo Cunha Santos A. V. Silva Neto, Yasushi Yagi, and Tomoya Nakamura, "Deep lensless imaging with non-iterative output-constraint satisfaction," Optics Express, Vol. 34, No. 20, pp. 37137-37151 (2026).
 1. Keita Ueno, Kazuyuki Niki, Hiroyuki Tanaka, Takeshi Okuda, Daisuke Iwai, Kosuke Sato, Yasuo Naito, Toshinori Ito, and Ryouhei Ishii, “Immediate anxiety-reducing effects of multisensory virtual reality reminiscence therapy in older adults with a wide range of cognitive functions: a pilot study using electrophysiological measures,” Frontiers in Aging Neuroscience, Volume 18, Article 1958403, 2026.
-1. Yusuke Imoto, Takashi Amesaka, and Daisuke Iwai, “AeroPixels: Repurposing Ubiquitous Displays as Imperceptible Schlieren Light Sources for Airflow Interaction,” In Proceedings of the ACM Symposium on User Interface Software and Technology (UIST), Article No. 90, pp. 1-12, 2026.
 
 #### 国際会議
 1. Hiroki Kusuyama, Tomoya Nakamura, Daisuke Iwai, "Coded aperture optimization for mitigating aberration in large-format Fresnel lens towards shadowless projection mapping," Proc. SPIE 13821, Optical Architectures for Displays and Sensing in Augmented, Virtual, and Mixed Reality (AR, VR, MR) VII, 1382106 (4 pages) (5 March 2026)
@@ -61,6 +60,7 @@ Yuxuan Sun, Liwei Chan, Takashi Amesaka, Yuta Sugiura, "AirHook: Simulating 3D S
 1. Kousei Nagayama, Kazuya Ishikawa, Takashi Amesaka, Buntarou Shizuki, “Ear Lock+: A Personal Authentication Method for Hearables Using Sound Leakage Signals Allowing Hand Motion", Augmented Humans 2026 Poster and Demo track (4 pages) (17 March 2026).
 1. Hodaka Kawachi, José Reinaldo Cunha Santos A. V. Silva Neto, Yasushi Yagi, Hajime Nagahara, and Tomoya Nakamura, "Single-Image Depth from Defocus with Coded Aperture and Diffusion Posterior Sampling," IEEE International Conference on Computational Photography (ICCP), poster presentation, Princeton, New Jersey, USA, Jul. 2026.
 1. José Reinaldo Cunha Santos A. V. Silva Neto, Hodaka Kawachi, Yasushi Yagi, and Tomoya Nakamura, "Null-Space Diffusion Distillation Unlocks Speed, Fidelity and Realism in Lensless Imaging," IEEE International Conference on Computational Photography (ICCP), oral presentation, Princeton, New Jersey, USA, Jul. 2026, pp. 1-11.
+1. Yusuke Imoto, Takashi Amesaka, and Daisuke Iwai, “AeroPixels: Repurposing Ubiquitous Displays as Imperceptible Schlieren Light Sources for Airflow Interaction,” In Proceedings of the ACM Symposium on User Interface Software and Technology (UIST), Article No. 90, pp. 1-12, 2026.
 
 #### 国内会議
 1. 向井拓海, 有川安信, 中村友哉, 山田龍弥, Alessio Morace, Lan Zechen, 岩本晃史, 藤岡慎介, 兒玉了祐, "マルチモードファイバーイメージングを用いた超高解像度中性子計測システムの開発," レーザー学会学術講演会第46回年次大会, C04-13p-IV-04, 2026.
