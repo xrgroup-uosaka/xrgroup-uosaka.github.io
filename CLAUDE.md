@@ -30,7 +30,9 @@ Hugo 製の研究室サイト。**このファイルは Claude Code に前提知
   - `user_groups` の値は `content/team/_index.md` の `groups` と**文字列一致**させる（一致しないと表示されない）。卒業生は `content/alumni/_index.md` の `groups` に合わせる
   - `content/member_register.py` は Blox 時代の GUI 登録ツール（`ja/`・`en/` ディレクトリ前提で現構成では動かない）。**content/ 配下にあるため公開サイトの `/member_register.py` として配信されている**（既知・未対応）
 - **プロジェクト** `content/projects/YY-MM-DD-Author-Venue/`（`index.md`・`index.en.md`・`featured.jpg`）
-  - front matter: `title` `venue` `tags` `date` `paper_authors` `links:[{label,url}]` `bibtex`
+  - front matter: `title` `venue` `tags` `date` `paper_authors` `links:[{label,url}]` `bibtex`。`links` の `label` はアイコン対応表（`layouts/projects/single.html` の `$iconmap`）にある名前だとボタンにアイコンが付く（`Paper`/`論文`/`DOI`、`arXiv`、`Code`/`コード`、`Video`/`動画`/`Talk video`/`講演動画`/`Supplementary video`/`補助動画`、`Poster`/`ポスター`、`Project`、`Press release` など）
+  - 論文の HTML（ACM TAPS 出力）から作る場合: 図は `uist26-NNN-figN.jpg`、ライセンスは CC-BY（図の再利用可）。`featured.jpg` は一覧が 16:10 に切り抜く（`Fill 640x400`）ので、横長の図は 1 パネルを切り出して使う（例: `26-11-02-Imoto-UIST`）
+  - 任意の front matter `teaser_height: 340`（px）を付けると、ティーザー画像の最大高さをそのページだけ小さくできる（既定は CSS の 520px）。元画像の解像度が低いときに使う（`single.html` がインラインで `max-height` を付ける。CSS は触らない）
   - `tags` には必ず `Projects` ＋ 研究領域（`XR Displays` / `Computational Imaging` / `XR Interaction` のいずれか）。一覧のフィルタはこの3領域固定（`layouts/projects/list.html`）で、クライアント側 JS で切替
   - 本文は `### Abstract` → `***` 区切り → `{{< youtube >}}` / `{{< figure >}}` / `{{< video src= caption= >}}`
   - 和文アブストは英文の翻訳であること（過去に別論文の要旨が入っていた事故あり）
